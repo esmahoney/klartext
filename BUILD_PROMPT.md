@@ -1,6 +1,4 @@
-# KlarText Build Prompt (for agent / codegen)
-
-## Product in one sentence
+# KlarText Overview
 KlarText is an accessibility-first tool that turns dense German/English text (pasted text, PDFs, and optionally web pages) into easy-to-understand language and can read it aloud.
 
 ## Persona (primary)

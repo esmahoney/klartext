@@ -1,0 +1,69 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+.eggs/
+*.egg-info/
+*.egg
+
+# Environment
+.env
+.env.local
+.env.*.local
+.venv/
+venv/
+ENV/
+
+# Build outputs
+.next/
+out/
+dist/
+build/
+*.js.map
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.nyc_output/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pip-log.txt
+
+# Misc
+*.bak
+*.tmp
+*.temp
+
+# Audio/media generated files (dev)
+*.mp3
+*.wav
+*.ogg
+
+# Uploaded files (dev)
+uploads/
+temp/
+
+# Docker
+.docker/
+
+# Type stubs
+*.pyi
+

@@ -1,0 +1,38 @@
+# Cursor rules for KlarText
+
+You are working in the KlarText repo. Optimize for correctness, accessibility, and small safe changes.
+
+## Non-negotiables
+- Do NOT invent APIs or endpoints that don’t exist—change code + docs together.
+- Do NOT add heavy frameworks or new services unless required for MVP.
+- Keep accessibility first: semantic HTML, labels, focus states, keyboard navigation.
+- Never log raw user text in production paths.
+
+## Project constraints (MVP)
+- No login/accounts.
+- No payment/subscription code.
+- No crawling entire domains.
+- No fine-tuning/training.
+
+## Style rules
+- Prefer TypeScript in `apps/web`.
+- Prefer FastAPI + Pydantic in `services/api`.
+- Keep functions small; avoid “mega” files.
+- Add comments only when something is non-obvious.
+
+## When editing frontend
+- Default font sizes: 18–20px base where reasonable.
+- Ensure AA contrast minimum; high-contrast mode must work.
+- Provide visible focus outline for all interactive elements.
+- Support reduced motion (no animated backgrounds).
+- Provide loading and error states for every async action.
+
+## When editing backend
+- Validate inputs (length, language, level).
+- Implement chunking for long texts.
+- Time out external LLM/TTS calls and return structured errors.
+- Add basic rate limiting (in-memory ok for dev).
+
+## Output format
+- If you change behavior, update README or API docs.
+- Provide a short summary + exact file paths changed.

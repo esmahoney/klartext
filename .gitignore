@@ -67,3 +67,45 @@ temp/
 # Type stubs
 *.pyi
 
+# =============================================================================
+# Data & Models (large files)
+# =============================================================================
+
+# Raw datasets (too large for git)
+data/raw/*.jsonl
+data/raw/*.json
+data/raw/*.csv
+data/raw/*.parquet
+data/raw/*.txt
+data/raw/*.tsv
+
+# Processed data (regenerate from notebooks)
+data/processed/*.jsonl
+data/processed/*.json
+data/processed/*.csv
+data/processed/*.parquet
+
+# Keep sample data (small enough to commit)
+!data/samples/
+
+# Trained models (too large for git)
+models/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+
+# HuggingFace cache
+.cache/
+~/.cache/huggingface/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Weights & Biases
+wandb/
+
+# TensorBoard
+runs/

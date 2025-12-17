@@ -18,16 +18,22 @@ Stretch (optional):
 ## Architecture
 ```mermaid
 flowchart LR
-  U[User] -->|Paste text / Upload PDF / URL| WEB[Web UI (Next.js)]
-  WEB -->|REST| API[API (FastAPI)]
-  API --> INGEST[Ingestion\nPDF/Text/URL]
-  INGEST --> CHUNK[Chunking + Safety\n(no hallucinations)]
-  CHUNK --> LLM[LLM Adapter\n(OpenAI/Azure/Groq/etc.)]
-  LLM --> SIMP[Easy-language output]
+  U[User] -->|Paste text<br/>Upload PDF<br/>Enter URL| WEB[Web UI<br/>Next.js]
+  WEB -->|REST| API[API<br/>FastAPI]
+  API --> INGEST[Ingestion]
+  INGEST --> CHUNK[Chunking]
+  CHUNK --> LLM[LLM Adapter]
+  LLM --> SIMP[Simplified Text]
   SIMP -->|optional| TTS[TTS Provider]
   API --> WEB
   TTS --> API
 ```
+
+**Components:**
+- **Ingestion** — Extract text from PDF, pasted text, or URL
+- **Chunking** — Split long texts, ensure no hallucinations
+- **LLM Adapter** — Configurable provider (OpenAI, Azure, Groq, Google)
+- **TTS Provider** — Text-to-speech for audio output
 
 ## Tech stack (recommended)
 - **Frontend:** Next.js (React), TypeScript, Tailwind (or vanilla CSS), accessible UI patterns
@@ -94,4 +100,23 @@ docker compose up --build
 Lovable prototype: https://lovable.dev/projects/7d82e6e7-3919-4389-9b79-30543806c5e0
 
 ## License
-TBD (pick one before making the repo public).
+Usage & Licensing Notice (Non-Commercial)
+This project, including all code, models, datasets, documentation, and related materials, is provided for personal, educational, and non-commercial research use only.
+
+Allowed
+Personal use
+Academic and non-commercial research
+Forking and modifying for non-commercial purposes
+Contributing via pull requests
+Not Allowed
+Any commercial use
+Selling or monetizing the software, models, datasets, or outputs
+Using the project in products or services that generate revenue
+Use within commercial organizations without permission
+Attribution
+If you share or publish derivative work, you must provide credit to:
+
+Based on work from the KlarText Team (2025).
+
+Commercial Licensing
+To request commercial usage rights, contact a repository administrator.
